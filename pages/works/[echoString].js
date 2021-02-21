@@ -1,12 +1,11 @@
 import { useRouter } from "next/router";
-import { withPageAuthRequired } from "@auth0/nextjs-auth0/dist/frontend";
 
 export default function Echo() {
   const router = useRouter();
-  console.log(router.asPath);
+  console.log("router.asPath:" + router.asPath);
   return (
     <div>
-      hello {router.query.echoString} {router.asPath}
+      hello {router.query.echoString}. router.asPath: {router.asPath}
     </div>
   );
 }
